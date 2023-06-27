@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Character } from 'src/app/shared/models/character';
-import { CharacterService } from 'src/app/shared/services/character.service';
+import { Character } from '../../shared/models/character';
+import { CharacterService } from '../../shared/services/character.service';
 
 @Component({
   selector: 'app-form',

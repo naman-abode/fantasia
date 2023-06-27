@@ -1,0 +1,31 @@
+<form (submit)="createCharacter()">
+  <h6 class="border-bottom pb-2 mb-3 text-center">Nouveau personnage</h6>
+
+  <div class="mb-3">
+    <label for="characterName" class="form-label fw-bold">Quel est son nom ?<span class="text-danger">*</span></label>
+    <input type="text" class="form-control" name="characterName" [(ngModel)]="inputCharacter.nom">
+  </div>
+
+  <div class="mb-3">
+    <label for="characterTitle" class="form-label fw-bold">Quel est son titre ?<span class="text-danger">*</span></label>
+    <input type="text" class="form-control" name="characterTitle" [(ngModel)]="inputCharacter.titre">
+  </div>
+
+  <div class="mb-3">
+    <label for="characterGenre" class="form-label fw-bold">Quel est son genre ?<span class="text-danger">*</span></label>
+    <select class="form-select" name="characterGenre" [(ngModel)]="inputCharacter.genre">
+      <option value="♂">Masculin</option>
+      <option value="♀">Féminin</option>
+      <option value="-">Autre</option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label for="characterClass" class="form-label fw-bold">A quelle classe appartient-il ?<span class="text-danger">*</span></label>
+    <input type="text" class="form-control" name="characterClass" [(ngModel)]="inputCharacter.classe">
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <button class="btn btn-outline-secondary btn-sm" type="submit">Créer</button>
+  </div>
+</form>

@@ -1,0 +1,30 @@
+<div class="my-3 p-3 bg-body rounded shadow-sm mb-3">
+  <h6 class="border-bottom pb-2 mb-3 text-center">Liste des personnages créés</h6>
+  <button class="btn btn-outline-secondary btn-sm" (click)="openForm()">Nouveau</button>
+  <table class="table table-striped table-responsive table-hover">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nom</th>
+        <th>Titre</th>
+        <th>Genre</th>
+        <th>Classe</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let character of characters">
+        <td>{{ character.id }}</td>
+        <td>{{ character.nom }}</td>
+        <td>{{ character.titre }}</td>
+        <td>{{ character.genre }}</td>
+        <td>{{ character.classe }}</td>
+        <td class="d-flex justify-content-around">
+          <button class="btn btn-outline-success" (click)="updateCharacter(character.id)">Modifier</button>
+          <button class="btn btn-danger" (click)="deleteCharacter(character.id)">Supprimer</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

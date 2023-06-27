@@ -8,13 +8,15 @@ import { FormComponent } from './components/form/form.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './components/home/home.component';
 import { AppRoutingModule } from './shared/app-routing.module';
+import { CharactersComponent } from './components/characters/characters.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FormComponent,
-    HomeComponent
+    HomeComponent,
+    CharactersComponent
   ],
   imports: [
     BrowserModule,
